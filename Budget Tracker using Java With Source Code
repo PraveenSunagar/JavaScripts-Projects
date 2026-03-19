@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-
 public class BudgetTracker {
     private ArrayList<Double> expenses;
     private ArrayList<Double> incomes;
