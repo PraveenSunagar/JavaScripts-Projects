@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class ATM {
     public static void main(String args[]) {
-        // declare and initialize balance, withdraw, and deposit
         int balance = 5000, withdraw, deposit;
         // create scanner class object to get choice of user
         Scanner sc = new Scanner(System.in);
