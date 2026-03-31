@@ -12,7 +12,6 @@ public class ATM {
             System.out.println("4. EXIT");
             System.out.print("Choose the operation you want to perform:");
 
-            // get choice from user
             int choice = sc.nextInt();
             switch (choice) {
                 case 1:
