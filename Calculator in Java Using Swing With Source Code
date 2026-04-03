@@ -29,7 +29,7 @@ public class Calculator {
 
     private char opt = ' '; 
     private boolean go = true; 
-    private boolean addWrite = true; // Connect numbers in display
+    private boolean addWrite = true; // Connect number
     private double val = 0; // Save the value typed for calculation
 
     /*
