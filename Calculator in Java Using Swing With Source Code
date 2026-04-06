@@ -30,7 +30,7 @@ public class Calculator {
     private char opt = ' '; 
     private boolean go = true; 
     private boolean addWrite = true;
-    private double val = 0; // Save the value
+    private double val = 0; 
 
     /*
         Mx Calculator:
