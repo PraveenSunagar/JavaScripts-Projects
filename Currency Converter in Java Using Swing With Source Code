@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 public class CodeWithCurious {
 
-    // Function to convert from rupee
+
     // to the dollar and vice-versa
     // using Java Swing
     public static void converter() {
