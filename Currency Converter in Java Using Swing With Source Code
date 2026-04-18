@@ -4,7 +4,8 @@ import java.awt.event.*;
 
 public class CodeWithCurious {
 
-    // using Java Swing
+    // using Java
+
     public static void converter() {
 
         // Creating a new frame using JFrame
