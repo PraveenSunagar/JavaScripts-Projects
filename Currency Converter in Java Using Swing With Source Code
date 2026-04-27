@@ -6,8 +6,7 @@ public class CodeWithCurious {
 
     public static void converter() {
 
-        // Creating a new frame using JFrame
-        JFrame f = new JFrame("CONVERTER");
+         JFrame f = new JFrame("CONVERTER");
 
         // Creating two labels
         JLabel l1, l2;
