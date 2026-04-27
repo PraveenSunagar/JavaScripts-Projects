@@ -8,7 +8,6 @@ public class CodeWithCurious {
 
          JFrame f = new JFrame("CONVERTER");
 
-        // Creating two labels
         JLabel l1, l2;
 
         // Creating two text fields.
