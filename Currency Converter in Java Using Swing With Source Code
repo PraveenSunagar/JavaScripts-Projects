@@ -9,8 +9,6 @@ public class CodeWithCurious {
          JFrame f = new JFrame("CONVERTER");
 
         JLabel l1, l2;
-
-        // Creating two text fields.
         // One for rupee and one for
         JTextField t1, t2;
 
