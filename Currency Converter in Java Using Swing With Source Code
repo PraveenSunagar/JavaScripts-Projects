@@ -12,7 +12,6 @@ public class CodeWithCurious {
 
         // Creating two text fields.
         // One for rupee and one for
-        // the dollar
         JTextField t1, t2;
 
         // Creating three buttons
