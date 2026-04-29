@@ -8,8 +8,7 @@ public class CodeWithCurious {
 
          JFrame f = new JFrame("CONVERTER");
 
-        JLabel l1, l2;
-        // One for
+        JLabel l1, l2:
         JTextField t1, t2;
 
         // Creating three buttons
