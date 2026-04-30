@@ -10,7 +10,6 @@ public class CodeWithCurious {
 
         JLabel l1, l2:
         JTextField t1, t2;
-Creating three buttons
         JButton b1, b2, b3;
 
         // Naming the labels and setting
