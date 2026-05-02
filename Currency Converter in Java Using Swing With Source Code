@@ -16,7 +16,6 @@ public class CodeWithCurious {
         l1.setBounds(20, 40, 60, 30);
         l2 = new JLabel("Dollars:");
         l2.setBounds(170, 40, 60, 30);
-        // 0 by default and setting the
         // bounds for the text fields
         t1 = new JTextField("0");
         t1.setBounds(80, 40, 50, 30);
