@@ -21,8 +21,7 @@ public class CodeWithCurious {
         t2 = new JTextField("0");
         t2.setBounds(240, 40, 50, 30);
 
-        
-        // one button for the dollar
+    
         // and one button to close
         // and setting the bounds
         b1 = new JButton("INR");
