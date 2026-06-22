@@ -1,1 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#222;
+}
+
+.slider{
+    width:700px;
+    max-width:90%;
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    box-shadow:0 0 20px rgba(255,255,255,.2);
+}
+
+.slider img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    display:block;
+}
+
+button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    padding:12px 18px;
+    font-size:22px;
+    border:none;
+    cursor:pointer;
+    background:rgba(0,0,0,.6);
+    color:#fff;
+}
+
+button:hover{
+    background:#000;
+}
+
+.prev{
+    left:10px;
+}
+
+.next{
+    right:10px;
+}
+
+.dots{
+    position:absolute;
+    bottom:15px;
+    width:100%;
+    text-align:center;
+}
+
+.dot{
+    display:inline-block;
+    width:12px;
+    height:12px;
+    margin:5px;
+    border-radius:50%;
+    background:#bbb;
+    cursor:pointer;
+}
+
+.active{
+    background:white;
+}
+</style>
+
+</head>
+<body>
+
+<div class="slider">
+
+<img id="slide"
+src="https://picsum.photos/id/1015/700/450">
+
+<button class="prev">&#10094;</button>
+
+<button class="next">&#10095;</button>
+
+<div class="dots"></div>
+
+</div>
+
+<script>
+
+const images = [
+
+"https://picsum.photos/id/1015/700/450",
+"https://picsum.photos/id/1016/700/450",
+"https://picsum.photos/id/1018/700/450",
+"https://picsum.photos/id/1020/700/450",
+"https://picsum.photos/id/1024/700/450"
+
+];
+
+let index = 0;
+
+const slide = document.getElementById("slide");
+
+const dotsContainer = document.querySelector(".dots");
+
+function createDots(){
+
+    dotsContainer.innerHTML="";
+
+    images.forEach((img,i)=>{
+
+        const dot=document.createElement("span");
+
+        dot.className="dot";
+
+        if(i===index){
+            dot.classList.add("active");
+        }
+
+        dot.onclick=()=>{
+
+            index=i;
+
+            showImage();
+
+        };
+
+        dotsContainer.appendChild(dot);
+
+    });
+
+}
+
+function showImage(){
+
+    slide.src=images[index];
+
+    createDots();
+
+}
+
+document.querySelector(".next").onclick=function(){
+
+    index++;
+
+    if(index>=images.length){
+        index=0;
+    }
+
+    showImage();
+
+}
+
+document.querySelector(".prev").onclick=function(){
+
+    index--;
+
+    if(index<0){
+        index=images.length-1;
+    }
+
+    showImage();
+
+}
+
+// Auto Slide
+setInterval(()=>{
+
+    index++;
+
+    if(index>=images.length){
+        index=0;
+    }
+
+    showImage();
+
+},3000);
+
+showImage();
+
+</script>
+
+</body>
+</html>
