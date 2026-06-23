@@ -177,7 +177,7 @@ document.querySelector(".prev").onclick=function(){
 
 }
 
-// Auto Slide
+// Auto
 setInterval(()=>{
 
     index++;
