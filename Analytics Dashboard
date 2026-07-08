@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Dashboard</title>
 
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f7fa;
+padding:30px;
+transition:.3s;
+}
+
+.dark{
+background:#121212;
+color:white;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+button{
+padding:10px 20px;
+border:none;
+background:#2563eb;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.dark .card{
+background:#1f2937;
+}
+
+.card h2{
+margin-top:10px;
+font-size:30px;
+color:#2563eb;
+}
+
+.progress-box{
+margin-top:30px;
+}
+
+.progress{
+height:12px;
+background:#ddd;
+border-radius:20px;
+overflow:hidden;
+margin:10px 0;
+}
+
+.fill{
+height:100%;
+background:#2563eb;
+}
+
+.activity{
+margin-top:30px;
+background:white;
+padding:20px;
+border-radius:10px;
+}
+
+.dark .activity{
+background:#1f2937;
+}
+
+.activity li{
+margin:12px 0;
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+<h1>📊 Analytics Dashboard</h1>
+
+<button onclick="toggleMode()">
+Dark Mode
+</button>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<p>Visitors</p>
+<h2 id="v">1200</h2>
+</div>
+
+<div class="card">
+<p>Sales</p>
+<h2 id="s">$5400</h2>
+</div>
+
+<div class="card">
+<p>Orders</p>
+<h2 id="o">320</h2>
+</div>
+
+<div class="card">
+<p>Revenue</p>
+<h2 id="r">$9800</h2>
+</div>
+
+</div>
+
+<div class="progress-box">
+
+<h3>Monthly Goal</h3>
+
+<div class="progress">
+<div class="fill" style="width:75%"></div>
+</div>
+
+<h3>Sales Progress</h3>
+
+<div class="progress">
+<div class="fill" style="width:60%"></div>
+</div>
+
+</div>
+
+<div class="activity">
+
+<h2>Recent Activity</h2>
+
+<ul>
+<li>✅ New Order Received</li>
+<li>👤 User Registered</li>
+<li>💰 Payment Successful</li>
+<li>📦 Product Delivered</li>
+</ul>
+
+</div>
+
+<script>
+
+function toggleMode(){
+
+document.body.classList.toggle("dark");
+
+}
+
+setInterval(()=>{
+
+document.getElementById("v").innerHTML=
+Math.floor(Math.random()*5000);
+
+document.getElementById("s").innerHTML=
+"$"+Math.floor(Math.random()*10000);
+
+document.getElementById("o").innerHTML=
+Math.floor(Math.random()*800);
+
+document.getElementById("r").innerHTML=
+"$"+Math.floor(Math.random()*20000);
+
+},3000);
+
+</script>
+
+</body>
+</html>
